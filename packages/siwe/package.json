@@ -3,13 +3,14 @@
   "version": "2.3.2",
   "description": "Sign-In with Ethereum",
   "main": "dist/siwe.js",
+  "module": "dist/siwe.mjs",
   "types": "dist/siwe.d.ts",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "jest",
-    "build": "tsc",
+    "build": "tsup lib/siwe.ts --dts --format esm,cjs",
     "lint": "eslint --ext .js,.ts .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },

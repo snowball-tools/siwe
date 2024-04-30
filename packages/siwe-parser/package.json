@@ -3,13 +3,14 @@
   "version": "2.1.2",
   "description": "Parse Messages that conform to EIP-4361: Sign-In with Ethereum (SIWE)",
   "main": "dist/parsers.js",
+  "module": "dist/parsers.mjs",
   "types": "dist/parsers.d.ts",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "jest",
-    "build": "tsc",
+    "build": "tsup lib/parsers.ts --dts --format esm,cjs",
     "lint": "eslint --ext .js,.ts .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
