@@ -3,7 +3,7 @@ import {
   isEIP55Address,
   ParsedMessage,
   parseIntegerNumber,
-} from '@spruceid/siwe-parser';
+} from '@snowballtools/siwe-parser-fork';
 import * as uri from 'valid-url';
 
 import { getAddress, Provider, verifyMessage } from './ethersCompat';
